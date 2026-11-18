@@ -16,12 +16,13 @@
 // by the forced flatten before its bounce has time to arrive.
 //
 // Measured on the published dev window (kit grade-local, process driver):
-// net PnL about +$16, 4 fills, max drawdown about 0.8%. The same rules on
-// the previous day's dev window make about +$6, and every nearby parameter
-// choice (drop 1.0-1.5%, take-profit 0.8-1.2%) stays positive on both
-// windows, so the numbers below sit in the middle of a plateau, not on a
-// peak. A 6-hour-block bootstrap over both windows gives a median near +$9
-// and a 75% chance of finishing above zero.
+// net PnL +$15.99, 4 fills, max drawdown 0.83%, fees $1.61, both graded runs
+// reproduce the same action log. The same rules on the previous day's dev
+// window make +$5.96, and every nearby parameter choice (drop 1.0-1.5%,
+// take-profit 0.8-1.2%) stays positive on both windows, so the numbers below
+// sit in the middle of a plateau, not on a peak. A 6-hour-block bootstrap
+// over both windows gives a median near +$9 and a 75% chance of finishing
+// above zero.
 //
 // Deterministic: pure float64 arithmetic on the bars the harness sends, no
 // clock, no environment, no randomness, no network. Two runs on the same
